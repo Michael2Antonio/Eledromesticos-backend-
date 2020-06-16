@@ -1,5 +1,6 @@
 const express = require('express');
 const Pool = require('pg').Pool;
+const cors = require('cors');
 
 const pool = new Pool({
     user: 'yizzvorepkddap',
@@ -11,7 +12,7 @@ const pool = new Pool({
 });
 
 const server = express();
-
+server.use(cors());
 
 server.use(express.json());
 
